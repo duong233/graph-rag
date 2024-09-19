@@ -30,8 +30,9 @@ class GraphRAGQueryEngine(CustomQueryEngine):
 
         messages = [
             ChatMessage(role="system", content=prompt),
-            ChatMessage(role="user",
-                        content="I need an answer based on the above information."),
+            ChatMessage(
+                role="user", content="I need an answer based on the above information."
+            ),
         ]
 
         response = self.llm.chat(messages)
